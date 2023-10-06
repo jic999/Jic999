@@ -5,7 +5,8 @@ import NProgress from 'NProgress'
 import JHeader from './components/JHeader.vue'
 import JHome from './components/JHome.vue'
 import JFooter from './components/JFooter.vue'
-import JContent from './components/JContent.vue'
+import JPage from './components/JPage.vue'
+import JPost from './components/JPost.vue'
 
 // https://vitepress.dev/reference/runtime-api#usedata
 const { frontmatter } = useData()
@@ -35,8 +36,11 @@ onMounted(() => {
       <div v-if="frontmatter.home">
         <JHome />
       </div>
+      <div v-else-if="frontmatter.layout === 'page'">
+        <JPage />
+      </div>
       <div v-else>
-        <JContent />
+        <JPost />
       </div>
     </main>
     <JFooter />

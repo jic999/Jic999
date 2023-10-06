@@ -14,6 +14,7 @@ export interface Post {
   banner?: string
   tags?: string[]
   dir?: string
+  readingTime?: number
 }
 
 export interface PostGroupMap { [k: string]: Post[] }

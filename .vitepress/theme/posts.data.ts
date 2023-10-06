@@ -22,15 +22,27 @@ export default {
       .map((articleFile) => {
         const articleContent = fs.readFileSync(articleFile, 'utf-8')
         let { data, excerpt } = matter(articleContent, { excerpt: true })
+        // 计算阅读时间
+        const md = new MarkdownIt()
+        const tokens = md.parse(articleContent, {})
         // 若无摘录 excerpt，则自动生成
-        if (!excerpt)
-          excerpt = getArticleExcerpt(articleContent)
+        if (!excerpt) {
+          excerpt = ''
+          const filterTokens = tokens.filter(item => item.children?.length === 1)
+          for (const token of filterTokens) {
+            if (isNormalParagraph(token.content))
+              excerpt += token.content
+            if (excerpt.length > 120)
+              break
+          }
+        }
         return {
           author: 'jic999',
           ...data,
           date: formatDate(data.date),
           excerpt,
           path: articleFile.substring(articleFile.lastIndexOf('/posts/')).replace(/\.md$/, ''),
+          readingTime: Math.ceil(tokens.length / 30),
         } as Post
       })
       .sort((a, b) => b.date.time - a.date.time)
@@ -56,9 +68,9 @@ function formatDate(date: string | Date) {
 
 export function getArticleExcerpt(content: string) {
   const md = new MarkdownIt()
-  const text = md.parse(content, {})
+  const result = md.parse(content, {})
   let excerpt = ''
-  const tokens = text.filter(item => item.children?.length === 1)
+  const tokens = result.filter(item => item.children?.length === 1)
   for (const token of tokens) {
     if (isNormalParagraph(token.content))
       excerpt += token.content

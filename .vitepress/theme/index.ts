@@ -8,7 +8,6 @@ import 'nprogress/nprogress.css'
 export default {
   Layout,
   enhanceApp({ app, router, siteData }) {
-    console.log('app ==> ', app)
     // ...
   },
 } as Theme
