@@ -1,14 +1,3 @@
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  border: 0 solid #e2e2e2;
-}
-
-.dark *, ::after, ::before {
-  border-color: #484848;
-}
-
 body {
   margin: 0;
 }
@@ -18,9 +7,6 @@ a {
   color: inherit;
   text-decoration: none;
   outline: none;
-}
-a:hover {
-  text-decoration: underline;
 }
 
 input {

@@ -1,9 +1,10 @@
-// https://vitepress.dev/guide/custom-theme
-import type { Theme } from 'vitepress'
-import Layout from './Layout.vue'
 import 'uno.css'
 import './styles/index.css'
 import 'nprogress/nprogress.css'
+
+// https://vitepress.dev/guide/custom-theme
+import type { Theme } from 'vitepress'
+import Layout from './Layout.vue'
 
 export default {
   Layout,

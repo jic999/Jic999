@@ -12,7 +12,7 @@ const { postsByDate } = data
           <div mb-lg>{{ time }}</div>
           <div v-for="(post, i) in posts" :key="i" class="post-group__item" mb-8>
             <h2 text-contrast>{{ post.title }}</h2>
-            <p my-sm leading-relaxed>{{ post.excerpt }}</p>
+            <p my-sm leading-relaxed text-secondary>{{ post.excerpt }}</p>
             <div flex justify-between>
               <div>
                 <div v-if="post.tags" flex gap-x-xs>
@@ -24,7 +24,10 @@ const { postsByDate } = data
                   >{{ tag }}</span>
                 </div>
               </div>
-              <a :href="post.path" text-btn>Read more</a>
+              <div>
+                <span mr-sm text="sm secondary">{{ `${post.readingTime}min` }}</span>
+                <a class="readmore__btn" :href="post.path" text-xl text-btn>Read more</a>
+              </div>
             </div>
           </div>
         </div>

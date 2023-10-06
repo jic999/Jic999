@@ -13,9 +13,9 @@ const meta = posts.find(post => route.path.includes(post.path))!
       {{ meta.title }}
     </h1>
     <div border-b pb-lg text-sm>
-      预计阅读时长：{{ `${meta.readingTime} min` }}
+      {{ `${meta.date.string} · ${meta.readingTime} min` }}
     </div>
-    <article max-w-full prose>
+    <article class="prose" max-w-full>
       <Content />
     </article>
   </div>
