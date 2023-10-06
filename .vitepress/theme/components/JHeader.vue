@@ -12,7 +12,7 @@ import { toggleDark } from '@/composables/app'
       </div>
       <div flex gap-x-lg text-base>
         <a title="GitHub" i-uil:github-alt href="https://github.com/jic999" target="_blank" text-btn-primary />
-        <a title="Toggle Color Scheme" i-ri:moon-line dark:i-ri:sun-line text-btn-primary @click="() => toggleDark()" />
+        <a title="Toggle Color Scheme" i-ri:moon-line dark:i-ri:sun-line text-btn-primary @click="(e) => toggleDark(e)" />
       </div>
     </div>
   </header>
