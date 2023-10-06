@@ -1,5 +1,5 @@
 import 'uno.css'
-import './styles/index.css'
+import './styles/main.scss'
 import 'nprogress/nprogress.css'
 
 // https://vitepress.dev/guide/custom-theme

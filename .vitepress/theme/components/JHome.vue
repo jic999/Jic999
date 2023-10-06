@@ -5,8 +5,8 @@ const { postsByDate } = data
 </script>
 
 <template>
-  <div mx-auto shadow bg-main container>
-    <section padding-base>
+  <div class="fade-in" mx-auto shadow bg-main container>
+    <section class="slide-enter-content" padding-base>
       <template v-for="(posts, time) in postsByDate" :key="time">
         <div class="post-group" border-b py-6>
           <div mb-lg>{{ time }}</div>

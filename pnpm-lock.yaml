@@ -40,6 +40,9 @@ devDependencies:
   markdown-it:
     specifier: ^13.0.2
     version: registry.npmmirror.com/markdown-it@13.0.2
+  sass:
+    specifier: ^1.69.0
+    version: registry.npmmirror.com/sass@1.69.0
   shikiji:
     specifier: ^0.6.8
     version: registry.npmmirror.com/shikiji@0.6.8
@@ -48,7 +51,7 @@ devDependencies:
     version: registry.npmmirror.com/unocss@0.56.5(postcss@8.4.31)(vite@4.4.11)
   vitepress:
     specifier: 1.0.0-rc.20
-    version: registry.npmmirror.com/vitepress@1.0.0-rc.20(@algolia/client-search@4.20.0)(@types/node@20.8.2)(nprogress@0.2.0)(postcss@8.4.31)(search-insights@2.8.3)
+    version: registry.npmmirror.com/vitepress@1.0.0-rc.20(@algolia/client-search@4.20.0)(@types/node@20.8.2)(nprogress@0.2.0)(postcss@8.4.31)(sass@1.69.0)(search-insights@2.8.3)
   vue:
     specifier: ^3.3.4
     version: registry.npmmirror.com/vue@3.3.4
@@ -1262,7 +1265,7 @@ packages:
       '@unocss/core': registry.npmmirror.com/@unocss/core@0.56.5
       '@unocss/reset': registry.npmmirror.com/@unocss/reset@0.56.5
       '@unocss/vite': registry.npmmirror.com/@unocss/vite@0.56.5(vite@4.4.11)
-      vite: registry.npmmirror.com/vite@4.4.11(@types/node@20.8.2)
+      vite: registry.npmmirror.com/vite@4.4.11(@types/node@20.8.2)(sass@1.69.0)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -1533,7 +1536,7 @@ packages:
       chokidar: registry.npmmirror.com/chokidar@3.5.3
       fast-glob: registry.npmmirror.com/fast-glob@3.3.1
       magic-string: registry.npmmirror.com/magic-string@0.30.4
-      vite: registry.npmmirror.com/vite@4.4.11(@types/node@20.8.2)
+      vite: registry.npmmirror.com/vite@4.4.11(@types/node@20.8.2)(sass@1.69.0)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -3189,6 +3192,12 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
+  registry.npmmirror.com/immutable@4.3.4:
+    resolution: {integrity: sha512-fsXeu4J4i6WNWSikpI88v/PcVflZz+6kMhUfIwc5SY+poQRPnaf5V7qds6SUyUN3cVxEzuCab7QIoLOQ+DQ1wA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/immutable/-/immutable-4.3.4.tgz}
+    name: immutable
+    version: 4.3.4
+    dev: true
+
   registry.npmmirror.com/import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/import-fresh/-/import-fresh-3.3.0.tgz}
     name: import-fresh
@@ -4233,6 +4242,18 @@ packages:
       queue-microtask: registry.npmmirror.com/queue-microtask@1.2.3
     dev: true
 
+  registry.npmmirror.com/sass@1.69.0:
+    resolution: {integrity: sha512-l3bbFpfTOGgQZCLU/gvm1lbsQ5mC/WnLz3djL2v4WCJBDrWm58PO+jgngcGRNnKUh6wSsdm50YaovTqskZ0xDQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/sass/-/sass-1.69.0.tgz}
+    name: sass
+    version: 1.69.0
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: registry.npmmirror.com/chokidar@3.5.3
+      immutable: registry.npmmirror.com/immutable@4.3.4
+      source-map-js: registry.npmmirror.com/source-map-js@1.0.2
+    dev: true
+
   registry.npmmirror.com/search-insights@2.8.3:
     resolution: {integrity: sha512-W9rZfQ9XEfF0O6ntgQOTI7Txc8nkZrO4eJ/pTHK0Br6wWND2sPGPoWg+yGhdIW7wMbLqk8dc23IyEtLlNGpeNw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/search-insights/-/search-insights-2.8.3.tgz}
     name: search-insights
@@ -4694,7 +4715,7 @@ packages:
       '@unocss/transformer-directives': registry.npmmirror.com/@unocss/transformer-directives@0.56.5
       '@unocss/transformer-variant-group': registry.npmmirror.com/@unocss/transformer-variant-group@0.56.5
       '@unocss/vite': registry.npmmirror.com/@unocss/vite@0.56.5(vite@4.4.11)
-      vite: registry.npmmirror.com/vite@4.4.11(@types/node@20.8.2)
+      vite: registry.npmmirror.com/vite@4.4.11(@types/node@20.8.2)(sass@1.69.0)
     transitivePeerDependencies:
       - postcss
       - rollup
@@ -4759,7 +4780,7 @@ packages:
       vfile-message: registry.npmmirror.com/vfile-message@4.0.2
     dev: true
 
-  registry.npmmirror.com/vite@4.4.11(@types/node@20.8.2):
+  registry.npmmirror.com/vite@4.4.11(@types/node@20.8.2)(sass@1.69.0):
     resolution: {integrity: sha512-ksNZJlkcU9b0lBwAGZGGaZHCMqHsc8OpgtoYhsQ4/I2v5cnpmmmqe5pM4nv/4Hn6G/2GhTdj0DhZh2e+Er1q5A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite/-/vite-4.4.11.tgz}
     id: registry.npmmirror.com/vite/4.4.11
     name: vite
@@ -4794,11 +4815,12 @@ packages:
       esbuild: registry.npmmirror.com/esbuild@0.18.20
       postcss: registry.npmmirror.com/postcss@8.4.31
       rollup: registry.npmmirror.com/rollup@3.29.4
+      sass: registry.npmmirror.com/sass@1.69.0
     optionalDependencies:
       fsevents: registry.npmmirror.com/fsevents@2.3.3
     dev: true
 
-  registry.npmmirror.com/vitepress@1.0.0-rc.20(@algolia/client-search@4.20.0)(@types/node@20.8.2)(nprogress@0.2.0)(postcss@8.4.31)(search-insights@2.8.3):
+  registry.npmmirror.com/vitepress@1.0.0-rc.20(@algolia/client-search@4.20.0)(@types/node@20.8.2)(nprogress@0.2.0)(postcss@8.4.31)(sass@1.69.0)(search-insights@2.8.3):
     resolution: {integrity: sha512-CykMUJ8JLxLcGWek0ew3wln4RYbsOd1+0YzXITTpajggpynm2S331TNkJVOkHrMRc6GYe3y4pS40GfgcW0ZwAw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vitepress/-/vitepress-1.0.0-rc.20.tgz}
     id: registry.npmmirror.com/vitepress/1.0.0-rc.20
     name: vitepress
@@ -4824,7 +4846,7 @@ packages:
       minisearch: registry.npmmirror.com/minisearch@6.1.0
       postcss: registry.npmmirror.com/postcss@8.4.31
       shiki: registry.npmmirror.com/shiki@0.14.4
-      vite: registry.npmmirror.com/vite@4.4.11(@types/node@20.8.2)
+      vite: registry.npmmirror.com/vite@4.4.11(@types/node@20.8.2)(sass@1.69.0)
       vue: registry.npmmirror.com/vue@3.3.4
     transitivePeerDependencies:
       - '@algolia/client-search'

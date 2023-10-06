@@ -8,7 +8,7 @@ const meta = posts.find(post => route.path.includes(post.path))!
 </script>
 
 <template>
-  <div mx-auto padding-base bg-main container>
+  <div class="fade-in" mx-auto padding-base bg-main container>
     <h1 my-lg>
       {{ meta.title }}
     </h1>
@@ -16,7 +16,7 @@ const meta = posts.find(post => route.path.includes(post.path))!
       {{ `${meta.date.string} · ${meta.readingTime} min` }}
     </div>
     <article class="prose" max-w-full>
-      <Content />
+      <Content class="slide-enter-post" />
     </article>
   </div>
 </template>

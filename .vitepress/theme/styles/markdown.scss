@@ -1,0 +1,79 @@
+html {
+  --s-bg-c: #ffffff;
+  --s-dark-bg-c: #121212;
+
+  .shiki {
+    background-color: var(--s-bg-c) !important;
+  }
+
+  &.dark .shiki,
+  &.dark .shiki span {
+    color: var(--s-dark) !important;
+    background-color: var(--s-dark-bg-c) !important;
+  }
+}
+html.dark {
+  --s-bg-c: var(--s-dark-bg-c)
+}
+
+.prose {
+  pre {
+    line-height: 1.4;
+  }
+  pre::-webkit-scrollbar {
+    background: var(--s-bg-c);
+  }
+  .vp-adaptive-theme {
+    position: relative;
+  }
+  .copy {
+    position: absolute;
+    display: none;
+  }
+  .lang {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 8px;
+    font-size: 14px;
+    transition: opacity 0.2s;
+  }
+  p {
+    color: var(--text-c-1);
+  }
+  a {
+    font-weight: inherit;
+    text-decoration: none;
+    color: var(--text-c);
+    border-bottom: 1px solid var(--border-c);
+    transition: border 0.3s ease-in-out;
+    &:hover {
+      border-bottom: 1px solid var(--text-c);
+    }
+    code {
+      color: inherit;
+    }
+  }
+}
+
+.prose table {
+  /* Table  */
+  tbody tr {
+    border-bottom-width: 1px;
+  }
+  tbody tr td,
+  thead tr th {
+    border: 1px solid var(--border-c);
+  }
+  /* 斑马线 */
+  tbody tr:nth-child(2n),
+  thead tr th {
+    background-color: #eee;
+  }
+}
+html.dark .prose table {
+  tbody tr:nth-child(2n),
+  thead tr th {
+    background-color: #222;
+  }
+} 

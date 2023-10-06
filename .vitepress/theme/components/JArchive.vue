@@ -18,14 +18,19 @@ postData.posts.forEach((item) => {
 </script>
 
 <template>
-  <div flex-center px="8 md:20%" bg-main container>
+  <div class="fade-in" flex-center px="8 md:20%" bg-main container>
     <div flex flex-col items-start>
-      <div v-for="(list, time) in postByYear" :key="time" class="archive-group" flex flex-col border-b py-8>
+      <div
+        v-for="(list, time) in postByYear"
+        :key="time"
+        class="archive-group slide-enter-content"
+        flex flex-col border-b py-8
+      >
         <div py-lg text-2rem>
           {{ time }}
         </div>
-        <div flex flex-col items-start gap-y-xs>
-          <a v-for="post in list" :key="post.url" flex text-btn :href="post.path">
+        <div class="slide-enter-content" flex flex-col items-start gap-y-xs>
+          <a v-for="post in list" :key="post.url" flex text-secondary transition-color-300 hover:text-primary :href="post.path">
             <div w-132px shrink-0>
               {{ post.month }}
             </div>
