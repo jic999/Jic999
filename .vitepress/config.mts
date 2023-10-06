@@ -8,6 +8,7 @@ export default async () => defineConfig({
   title: 'Jic999',
   description: 'Jic999\'s personal website~',
   appearance: false,
+  cleanUrls: true,
   markdown: {
     highlight: await highlighter(),
   },
