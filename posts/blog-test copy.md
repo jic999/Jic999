@@ -1,8 +1,9 @@
 ---
-title: 滕王阁序
+title: 滕王阁序 COPY
 author: jic999
-date: 2022-06-11
+date: 2022-06-12
 lastUpdated: true
+banner: https://cdn.jsdelivr.net/gh/jic999/images/blog/11377.jpg
 tags:
   - 滕王阁序
   - 古文

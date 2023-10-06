@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { getSlideStyle } from '@/composables/app'
 import { data as postData } from '@/posts.data'
 
 const postByYear: any = {}
@@ -15,27 +16,35 @@ postData.posts.forEach((item) => {
     year,
   })
 })
+
+function getIndex(i: number) {
+  return Object.keys(postByYear).slice(0, i).reduce((acc, cur) => {
+    return acc + postByYear[cur].length + 1
+  }, 0)
+}
 </script>
 
 <template>
-  <div class="fade-in" flex-center px="8 md:20%" bg-main container>
+  <div class="fade-in" px="8 md:20%" flex-center py-4 bg-main container>
     <div flex flex-col items-start>
       <div
-        v-for="(list, time) in postByYear"
+        v-for="(list, time, i) in postByYear"
         :key="time"
-        class="archive-group slide-enter-content"
-        flex flex-col border-b py-8
+        class="archive-group"
+        flex flex-col border-b py8
       >
-        <div py-lg text-2rem>
+        <div class="slide-enter" :style="getSlideStyle(getIndex(i))" text-2rem>
           {{ time }}
         </div>
-        <div class="slide-enter-content" flex flex-col items-start gap-y-xs>
-          <a v-for="post in list" :key="post.url" flex text-secondary transition-color-300 hover:text-primary :href="post.path">
-            <div w-132px shrink-0>
-              {{ post.month }}
-            </div>
-            <div ml-lg leading-relaxed ellipsis-2>{{ post.title }}</div>
-          </a>
+        <div flex flex-col items-start gap-y-xs py-6>
+          <template v-for="(post, index) in list" :key="post.url">
+            <a class="slide-enter" :style="getSlideStyle(getIndex(i) + index + 1)" flex text-secondary transition-color-300 hover:text-primary :href="post.path">
+              <div w-132px shrink-0>
+                {{ post.month }}
+              </div>
+              <div ml-lg leading-relaxed ellipsis-2>{{ post.title }}</div>
+            </a>
+          </template>
         </div>
       </div>
     </div>

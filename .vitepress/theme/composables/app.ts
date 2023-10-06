@@ -46,3 +46,10 @@ export function toggleDark(event: MouseEvent) {
       )
     })
 }
+
+export function getSlideStyle(i: number) {
+  return {
+    '--enter-stage': i,
+    '--enter-step': '60ms',
+  }
+}
