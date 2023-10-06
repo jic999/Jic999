@@ -11,8 +11,8 @@ import { toggleDark } from '@/composables/app'
         <a href="/about" text-btn-primary>About</a>
       </div>
       <div flex gap-x-lg text-base>
-        <div i-uil:github-alt text-btn-primary />
-        <div dark:i-ri:sun-line i-ri:moon-line text-btn-primary @click="() => toggleDark()" />
+        <a title="GitHub" i-uil:github-alt href="https://github.com/jic999" target="_blank" text-btn-primary />
+        <a title="Toggle Color Scheme" i-ri:moon-line dark:i-ri:sun-line text-btn-primary @click="() => toggleDark()" />
       </div>
     </div>
   </header>

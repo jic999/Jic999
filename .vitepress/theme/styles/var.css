@@ -12,8 +12,8 @@
   --dark-primary-c: ##eeeeee;
   --dark-text-c: #E5EAF3;
   --dark-text-c-1:#CFD3DC;
-  --dark-bg-c: #1a1a1a;
-  --dark-main-bg-c: #222;
+  --dark-bg-c: #222;
+  --dark-main-bg-c: #1a1a1a;
 }
 html.dark {
   --primary-c: var(--dark-primary-c);

@@ -6,6 +6,7 @@ import Unocss from 'unocss/vite'
 export default defineConfig({
   title: 'Jic999',
   description: 'Jic999\'s personal website~',
+  appearance: false,
   head: [
     ['link', { rel: 'stylesheet', href: 'https://cdn.staticfile.org/lxgw-wenkai-webfont/1.6.0/style.css' }],
   ],
