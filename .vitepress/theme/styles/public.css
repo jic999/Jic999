@@ -1,0 +1,30 @@
+html {
+  color: var(--text-c);
+  background-color: var(--bg-c);
+}
+
+body {
+  font-family: "LXGW WenKai", sans-serif;
+  font-size: 18px;
+}
+
+@media (min-width: 1280px) {
+  .container, [container=""] {
+    max-width: 1080px !important;
+  } 
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: var(--bg-c);
+}
+::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  background-color: #8888;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #888b;
+}

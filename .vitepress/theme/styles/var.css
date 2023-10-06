@@ -1,0 +1,24 @@
+:root {
+  --primary-c: #3F3F46;
+  --primary-c-1: #52525B;
+  --primary-c-2: #71717A;
+
+  --text-c: #303133;
+  --text-c-1:#606266;
+  --bg-c: #e7e6e1;
+  --main-bg-c: #f3f4f6;
+
+  /* dark theme */
+  --dark-primary-c: ##eeeeee;
+  --dark-text-c: #E5EAF3;
+  --dark-text-c-1:#CFD3DC;
+  --dark-bg-c: #1a1a1a;
+  --dark-main-bg-c: #222;
+}
+html.dark {
+  --primary-c: var(--dark-primary-c);
+  --text-c: var(--dark-text-c);
+  --text-c-1: var(--dark-text-c-1);
+  --bg-c: var(--dark-bg-c);
+  --main-bg-c: var(--dark-main-bg-c);
+}
