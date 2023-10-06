@@ -80,12 +80,11 @@ function insert<T>(head: ListNode<T>, index: number, element: T): void {
 insert(node_1, 2, 10)
 traverse(node_1) // 0 element: 1 -> 1 element: 2 -> 2 element: 10 -> 3 element: 3 -> 4 element: 4 -> 5 element: 5
 ```
-
 ## 删除节点
 
 知道如何插入节点后，删除节点也是同理，找到目标位置后，直接将上一个节点的`next`指向目标位置的下一个节点即可。
 
-删除节点后，被删除的节点仍然会执着地指向其原始位置的下一个节点，但它已经不再属于这个链表了😆。
+删除节点后，被删除的节点仍然会执着地指向其原始位置的下一个节点，但它已经不再属于这个链表了🙂。
 
 ```ts
 function remove(head: ListNode<any>, index: number): void {

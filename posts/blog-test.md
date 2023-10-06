@@ -3,7 +3,7 @@ title: 滕王阁序
 author: jic999
 date: 2023-06-11
 lastUpdated: true
-banner: http://static.bchend.cn/blog/11377.jpg
+banner: https://cdn.jsdelivr.net/gh/jic999/images/blog/11377.jpg
 tags:
   - 滕王阁序
   - 古文

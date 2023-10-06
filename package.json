@@ -1,12 +1,6 @@
 {
   "name": "jic999",
   "type": "module",
-  "version": "1.0.0",
-  "description": "",
-  "author": "",
-  "license": "ISC",
-  "keywords": [],
-  "main": "index.js",
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",

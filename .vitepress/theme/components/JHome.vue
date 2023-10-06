@@ -13,6 +13,7 @@ const { postsByDate } = data
           <div v-for="(post, i) in posts" :key="i" class="post-group__item" mb-8>
             <h2 text-contrast>{{ post.title }}</h2>
             <p my-sm leading-relaxed text-secondary>{{ post.excerpt }}</p>
+            <img v-if="post.banner" :src="post.banner" mb-xs w-full>
             <div flex justify-between>
               <div>
                 <div v-if="post.tags" flex gap-x-xs>
