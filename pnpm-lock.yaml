@@ -8,6 +8,9 @@ dependencies:
   '@vueuse/core':
     specifier: ^10.4.1
     version: registry.npmmirror.com/@vueuse/core@10.4.1(vue@3.3.4)
+  nprogress:
+    specifier: ^0.2.0
+    version: registry.npmmirror.com/nprogress@0.2.0
 
 devDependencies:
   '@antfu/eslint-config':
@@ -22,6 +25,9 @@ devDependencies:
   '@types/node':
     specifier: ^20.8.2
     version: registry.npmmirror.com/@types/node@20.8.2
+  '@types/nprogress':
+    specifier: ^0.2.1
+    version: registry.npmmirror.com/@types/nprogress@0.2.1
   '@unocss/eslint-config':
     specifier: ^0.56.5
     version: registry.npmmirror.com/@unocss/eslint-config@0.56.5(eslint@8.50.0)(typescript@5.2.2)
@@ -39,7 +45,7 @@ devDependencies:
     version: registry.npmmirror.com/unocss@0.56.5(postcss@8.4.31)(vite@4.4.11)
   vitepress:
     specifier: 1.0.0-rc.20
-    version: registry.npmmirror.com/vitepress@1.0.0-rc.20(@algolia/client-search@4.20.0)(@types/node@20.8.2)(postcss@8.4.31)(search-insights@2.8.3)
+    version: registry.npmmirror.com/vitepress@1.0.0-rc.20(@algolia/client-search@4.20.0)(@types/node@20.8.2)(nprogress@0.2.0)(postcss@8.4.31)(search-insights@2.8.3)
   vue:
     specifier: ^3.3.4
     version: registry.npmmirror.com/vue@3.3.4
@@ -962,6 +968,12 @@ packages:
     version: 2.4.2
     dev: true
 
+  registry.npmmirror.com/@types/nprogress@0.2.1:
+    resolution: {integrity: sha512-TYuyVnp+nOnimgdOydDIDYIxv2kSeuJZw4tF0p/KG7hpzcMF1WkHaREwM8O4blqfT1F7rq0nht6Ko2KVUfWzBA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/nprogress/-/nprogress-0.2.1.tgz}
+    name: '@types/nprogress'
+    version: 0.2.1
+    dev: true
+
   registry.npmmirror.com/@types/semver@7.5.3:
     resolution: {integrity: sha512-OxepLK9EuNEIPxWNME+C6WwbRAOOI2o2BaQEGzz5Lu2e4Z5eDnEo+/aVEDMIXywoJitJ7xWd641wrGLZdtwRyw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/semver/-/semver-7.5.3.tgz}
     name: '@types/semver'
@@ -1609,7 +1621,7 @@ packages:
       - '@vue/composition-api'
       - vue
 
-  registry.npmmirror.com/@vueuse/integrations@10.4.1(focus-trap@7.5.3)(vue@3.3.4):
+  registry.npmmirror.com/@vueuse/integrations@10.4.1(focus-trap@7.5.3)(nprogress@0.2.0)(vue@3.3.4):
     resolution: {integrity: sha512-uRBPyG5Lxoh1A/J+boiioPT3ELEAPEo4t8W6Mr4yTKIQBeW/FcbsotZNPr4k9uz+3QEksMmflWloS9wCnypM7g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vueuse/integrations/-/integrations-10.4.1.tgz}
     id: registry.npmmirror.com/@vueuse/integrations/10.4.1
     name: '@vueuse/integrations'
@@ -1656,6 +1668,7 @@ packages:
       '@vueuse/core': registry.npmmirror.com/@vueuse/core@10.4.1(vue@3.3.4)
       '@vueuse/shared': registry.npmmirror.com/@vueuse/shared@10.4.1(vue@3.3.4)
       focus-trap: registry.npmmirror.com/focus-trap@7.5.3
+      nprogress: registry.npmmirror.com/nprogress@0.2.0
       vue-demi: registry.npmmirror.com/vue-demi@0.14.6(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -3587,6 +3600,11 @@ packages:
       path-key: registry.npmmirror.com/path-key@4.0.0
     dev: true
 
+  registry.npmmirror.com/nprogress@0.2.0:
+    resolution: {integrity: sha512-I19aIingLgR1fmhftnbWWO3dXc0hSxqHQHQb3H8m+K3TnEn/iSeTZZOyvKXWqQESMwuUVnatlCnZdLBZZt2VSA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/nprogress/-/nprogress-0.2.0.tgz}
+    name: nprogress
+    version: 0.2.0
+
   registry.npmmirror.com/nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/nth-check/-/nth-check-2.1.1.tgz}
     name: nth-check
@@ -4442,7 +4460,7 @@ packages:
       fsevents: registry.npmmirror.com/fsevents@2.3.3
     dev: true
 
-  registry.npmmirror.com/vitepress@1.0.0-rc.20(@algolia/client-search@4.20.0)(@types/node@20.8.2)(postcss@8.4.31)(search-insights@2.8.3):
+  registry.npmmirror.com/vitepress@1.0.0-rc.20(@algolia/client-search@4.20.0)(@types/node@20.8.2)(nprogress@0.2.0)(postcss@8.4.31)(search-insights@2.8.3):
     resolution: {integrity: sha512-CykMUJ8JLxLcGWek0ew3wln4RYbsOd1+0YzXITTpajggpynm2S331TNkJVOkHrMRc6GYe3y4pS40GfgcW0ZwAw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vitepress/-/vitepress-1.0.0-rc.20.tgz}
     id: registry.npmmirror.com/vitepress/1.0.0-rc.20
     name: vitepress
@@ -4462,7 +4480,7 @@ packages:
       '@types/markdown-it': registry.npmmirror.com/@types/markdown-it@13.0.2
       '@vue/devtools-api': registry.npmmirror.com/@vue/devtools-api@6.5.0
       '@vueuse/core': registry.npmmirror.com/@vueuse/core@10.4.1(vue@3.3.4)
-      '@vueuse/integrations': registry.npmmirror.com/@vueuse/integrations@10.4.1(focus-trap@7.5.3)(vue@3.3.4)
+      '@vueuse/integrations': registry.npmmirror.com/@vueuse/integrations@10.4.1(focus-trap@7.5.3)(nprogress@0.2.0)(vue@3.3.4)
       focus-trap: registry.npmmirror.com/focus-trap@7.5.3
       mark.js: registry.npmmirror.com/mark.js@8.11.1
       minisearch: registry.npmmirror.com/minisearch@6.1.0

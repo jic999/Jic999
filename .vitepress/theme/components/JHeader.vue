@@ -8,7 +8,7 @@ import { toggleDark } from '@/composables/app'
     <div flex items-center gap-x-8>
       <div flex gap-x-lg>
         <a href="/" text-btn-primary>Home</a>
-        <a href="/about" text-btn-primary>About</a>
+        <a href="/archive" text-btn-primary>Archive</a>
       </div>
       <div flex gap-x-lg text-base>
         <a title="GitHub" i-uil:github-alt href="https://github.com/jic999" target="_blank" text-btn-primary />

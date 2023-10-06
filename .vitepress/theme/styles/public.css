@@ -14,6 +14,14 @@ body {
   } 
 }
 
+html #nprogress .bar {
+  background: var(--primary-c);
+  height: 1px;
+}
+html #nprogress .peg {
+  box-shadow: 0 0 10px var(--primary-c), 0 0 5px var(--primary-c);
+}
+/* 滚动条 */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;

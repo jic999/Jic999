@@ -15,11 +15,12 @@ export default defineConfig({
   },
   shortcuts: [
     {
-      'icon-btn': 'inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-primary',
-      'text-btn': 'inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100',
+      'flex-center': 'flex justify-center items-center',
       'border-base': 'border-[#8884]',
       'padding-base': 'px-12 py-4',
       'text-contrast': 'text-black dark:text-white',
+      'icon-btn': 'inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-primary',
+      'text-btn': 'text-btn-primary',
     },
     [/^btn-(\w+)$/, ([_, color]) => `cursor-pointer op50 px2.5 py1 transition-all duration-200 ease-out no-underline! hover:(op100 text-${color} bg-${color}/10) border border-base! rounded`],
     [/^text-btn-(\w+)$/, ([_, color]) => `cursor-pointer op65 transition-all duration-200 ease-out no-underline! hover:(op100 text-${color})`],

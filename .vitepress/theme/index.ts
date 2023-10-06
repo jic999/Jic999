@@ -3,6 +3,7 @@ import type { Theme } from 'vitepress'
 import Layout from './Layout.vue'
 import 'uno.css'
 import './styles/index.css'
+import 'nprogress/nprogress.css'
 
 export default {
   Layout,
