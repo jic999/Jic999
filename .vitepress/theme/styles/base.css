@@ -2,7 +2,7 @@
 ::before,
 ::after {
   box-sizing: border-box;
-  border: 0 solid #e8e8e8;
+  border: 0 solid #e2e2e2;
 }
 
 .dark *, ::after, ::before {

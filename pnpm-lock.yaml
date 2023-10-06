@@ -16,6 +16,9 @@ devDependencies:
   '@iconify/json':
     specifier: ^2.2.125
     version: registry.npmmirror.com/@iconify/json@2.2.125
+  '@types/markdown-it':
+    specifier: ^13.0.2
+    version: registry.npmmirror.com/@types/markdown-it@13.0.2
   '@types/node':
     specifier: ^20.8.2
     version: registry.npmmirror.com/@types/node@20.8.2

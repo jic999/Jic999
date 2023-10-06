@@ -60,19 +60,12 @@ export function getArticleExcerpt(content: string) {
   let excerpt = ''
   const tokens = text.filter(item => item.children?.length === 1)
   for (const token of tokens) {
-    excerpt += token.content
-    if (excerpt.length > 200) {
-      excerpt = excerpt.substring(0, 197)
-      const lastSpaceIndex = excerpt.lastIndexOf(' ')
-      const lastWord = excerpt.substring(lastSpaceIndex + 1)
-      if (/^[a-zA-Z]+$/.test(lastWord))
-        return `${excerpt.substring(0, lastSpaceIndex)}...`
-      return excerpt
-    }
+    if (isNormalParagraph(token.content))
+      excerpt += token.content
     if (excerpt.length > 120)
       return excerpt
   }
-  throw new Error('生成摘录失败，请检查文章内容')
+  return excerpt
 }
 
 export function readMdFiles(dir: string) {
@@ -126,4 +119,21 @@ export function categorizePosts(posts: Post[]) {
     postsByDir,
     postsByTag,
   }
+}
+
+function isNormalParagraph(mdText) {
+  // 定义正则表达式模式，用于匹配各种 Markdown 标记
+  const imagePattern = /!\[[^\]]*\]\((.*?)\)/
+  const linkPattern = /\[[^\]]*\]\((.*?)\)/
+  const tablePattern = /\|.*\|/
+  const headerPattern = /#{1,6} .*/
+
+  if (
+    imagePattern.test(mdText)
+    || linkPattern.test(mdText)
+    || tablePattern.test(mdText)
+    || headerPattern.test(mdText)
+  )
+    return false
+  return true
 }

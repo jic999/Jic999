@@ -3,6 +3,9 @@ title: Api Example
 date: 2023-06-11
 author: jic999
 banner: https://static.bchend.cn/blog/maciek-sulkowski-gmejHJ6k-VY-unsplash.jpg
+tags:
+  - 你好
+  - 世界
 ---
 
 Happy new year, Vue community! With 2023 upon us, we would like to take this opportunity to recap what happened in 2022, and discuss what to expect in 2023.

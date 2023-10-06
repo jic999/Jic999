@@ -5,9 +5,8 @@ tags:
   - Vitepress
 ---
 
-# Vitepress搭建个人博客——使用 nProgress 后项目打包失败
-
 使用Vitepress搭建个人博客，项目开发环境下运行正常，但打包时报了如下错误：
+
 ![图 1](https://cdn.jsdelivr.net/gh/jic999/images/blog/20230813233123_c.webp)
 
 ![图 2](https://cdn.jsdelivr.net/gh/jic999/images/blog/20230813234806_c.webp)
