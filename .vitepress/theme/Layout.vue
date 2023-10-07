@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onBeforeMount, onMounted, watch } from 'vue'
 import { useData, useRouter } from 'vitepress'
+import { usePreferredDark } from '@vueuse/core'
 import NProgress from 'NProgress'
 import JHeader from './components/JHeader.vue'
 import JHome from './components/JHome.vue'
@@ -26,6 +27,15 @@ watch(() => frontmatter.value.home, (isHome) => {
   else
     html.classList.remove('no-sliding')
 })
+
+const preferredDark = usePreferredDark()
+watch(preferredDark, () => {
+  const favicon = document.querySelector('link[rel="shortcut icon"]')!
+  if (preferredDark.value)
+    favicon.setAttribute('href', '/favicon-dark.svg')
+  else
+    favicon.setAttribute('href', '/favicon.svg')
+}, { immediate: true })
 
 onBeforeMount(() => {
   NProgress.configure({ showSpinner: false })

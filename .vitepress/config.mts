@@ -14,6 +14,7 @@ export default async () => defineConfig({
   },
   head: [
     ['link', { rel: 'stylesheet', href: 'https://cdn.staticfile.org/lxgw-wenkai-webfont/1.6.0/style.css' }],
+    ['link', { rel: 'shortcut icon', type: 'image/svg' }],
   ],
   vite: {
     plugins: [
