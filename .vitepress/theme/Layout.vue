@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onBeforeMount, onMounted, watch } from 'vue'
 import { useData, useRouter } from 'vitepress'
-import { usePreferredDark } from '@vueuse/core'
+import { usePreferredDark, useWindowScroll } from '@vueuse/core'
 import NProgress from 'nprogress'
 import JHeader from './components/JHeader.vue'
 import JHome from './components/JHome.vue'
@@ -9,10 +9,13 @@ import JFooter from './components/JFooter.vue'
 import JPage from './components/JPage.vue'
 import JPost from './components/JPost.vue'
 import NotFount from './components/NotFount.vue'
+import JScrollBackBtn from './components/JScrollBackBtn.vue'
 
 const { frontmatter, page } = useData()
 
 const router = useRouter()
+
+const { y } = useWindowScroll()
 
 const scrollYStorageKey = 'homeScrollY'
 
@@ -67,6 +70,9 @@ onMounted(() => {
       <JHome v-else-if="frontmatter.home" />
       <JPage v-else-if="frontmatter.layout === 'page'" />
       <JPost v-else />
+      <div>
+        <JScrollBackBtn v-show="y > 200" />
+      </div>
     </main>
     <JFooter />
   </div>
