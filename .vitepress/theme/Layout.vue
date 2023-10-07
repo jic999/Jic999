@@ -29,18 +29,18 @@ watch(() => frontmatter.value.home, (isHome) => {
     html.classList.remove('no-sliding')
 })
 
-const preferredDark = usePreferredDark()
-watch(preferredDark, () => {
-  const favicon = document.querySelector('link[rel="shortcut icon"]')!
-  if (preferredDark.value)
-    favicon.setAttribute('href', '/favicon-dark.svg')
-  else
-    favicon.setAttribute('href', '/favicon.svg')
-}, { immediate: true })
-
 onBeforeMount(() => {
   NProgress.configure({ showSpinner: false })
   NProgress.start()
+
+  const preferredDark = usePreferredDark()
+  watch(preferredDark, () => {
+    const favicon = document.querySelector('link[rel="shortcut icon"]')!
+    if (preferredDark.value)
+      favicon.setAttribute('href', '/favicon-dark.svg')
+    else
+      favicon.setAttribute('href', '/favicon.svg')
+  }, { immediate: true })
 })
 onMounted(() => {
   /* Loading bar, not in 'index.ts', because of SSR */
