@@ -56,8 +56,6 @@ onMounted(() => {
   router.onAfterRouteChanged = () => {
     NProgress.done()
   }
-  // TODO: 返回主页后不展示动画
-  // window.addEventListener('scroll', handleScroll)
 })
 </script>
 
@@ -65,10 +63,10 @@ onMounted(() => {
   <div>
     <JHeader />
     <main mt-lg>
-      <NotFount v-if="page.isNotFound" />
-      <JHome v-else-if="frontmatter.home" />
-      <JPage v-else-if="frontmatter.layout === 'page'" />
-      <JPost v-else />
+      <div v-if="page.isNotFound"><NotFount /></div>
+      <div v-else-if="frontmatter.home"><JHome /></div>
+      <div v-else-if="frontmatter.layout === 'page'"><JPage /></div>
+      <div v-else><JPost /></div>
     </main>
     <JFooter />
   </div>

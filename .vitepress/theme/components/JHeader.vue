@@ -3,7 +3,7 @@ import { toggleDark } from '@/composables/app'
 </script>
 
 <template>
-  <header flex justify-between padding-base py-xs shadow bg-main>
+  <header flex justify-between py-xs shadow bg-main padding-base>
     <a href="/" text-lg font-600>Jic999</a>
     <div flex items-center gap-x-8>
       <div flex gap-x-lg>
