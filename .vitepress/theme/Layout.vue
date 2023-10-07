@@ -63,10 +63,10 @@ onMounted(() => {
   <div>
     <JHeader />
     <main mt-lg>
-      <div v-if="page.isNotFound"><NotFount /></div>
-      <div v-else-if="frontmatter.home"><JHome /></div>
-      <div v-else-if="frontmatter.layout === 'page'"><JPage /></div>
-      <div v-else><JPost /></div>
+      <NotFount v-if="page.isNotFound" />
+      <JHome v-else-if="frontmatter.home" />
+      <JPage v-else-if="frontmatter.layout === 'page'" />
+      <JPost v-else />
     </main>
     <JFooter />
   </div>
