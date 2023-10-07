@@ -2,7 +2,7 @@
 import { onBeforeMount, onMounted, watch } from 'vue'
 import { useData, useRouter } from 'vitepress'
 import { usePreferredDark } from '@vueuse/core'
-import NProgress from 'NProgress'
+import NProgress from 'nprogress'
 import JHeader from './components/JHeader.vue'
 import JHome from './components/JHome.vue'
 import JFooter from './components/JFooter.vue'
