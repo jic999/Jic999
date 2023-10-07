@@ -1,7 +1,3 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
   <div class="slide-enter-content" py-8 text-center>
     <div mx-auto text-12 container text-contrast>404</div>

@@ -9,6 +9,7 @@ export default async () => defineConfig({
   description: 'Jic999\'s personal website~',
   appearance: false,
   cleanUrls: true,
+  lang: 'zh-CN',
   markdown: {
     highlight: await highlighter(),
   },
