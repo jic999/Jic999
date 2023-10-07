@@ -25,7 +25,7 @@ function getIndex(i: number) {
 </script>
 
 <template>
-  <div class="fade-in" px="8 md:20%" flex-center py-4 bg-main container>
+  <div class="slide-enter" px="8 md:20%" flex-center py-4 bg-main container>
     <div flex flex-col items-start>
       <div
         v-for="(list, time, i) in postByYear"
