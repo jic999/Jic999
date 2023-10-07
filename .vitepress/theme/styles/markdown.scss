@@ -16,9 +16,20 @@ html.dark {
   --s-bg-c: var(--s-dark-bg-c)
 }
 
+code { 
+  font-family: 'Fira Code', monospace !important;
+ }
+
+@supports (font-variation-settings: normal) {
+  code { 
+    font-family: 'Fira Code VF', monospace !important;
+  }
+}
+
 .prose {
   pre {
     line-height: 1.4;
+    font-size: 16px;
   }
   pre::-webkit-scrollbar {
     background: var(--s-bg-c);
@@ -65,7 +76,7 @@ html.dark {
     top: 0;
     margin: 8px;
     color: var(--text-c-1);
-    font-size: 14px;
+    font-size: 12px;
     opacity: 0.75;
     transition: opacity 0.4s;
   }
