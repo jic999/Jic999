@@ -8,8 +8,9 @@ import JHome from './components/JHome.vue'
 import JFooter from './components/JFooter.vue'
 import JPage from './components/JPage.vue'
 import JPost from './components/JPost.vue'
+import NotFount from './components/NotFount.vue'
 
-const { frontmatter } = useData()
+const { frontmatter, page } = useData()
 
 const router = useRouter()
 
@@ -64,15 +65,10 @@ onMounted(() => {
   <div>
     <JHeader />
     <main mt-lg>
-      <div v-if="frontmatter.home">
-        <JHome />
-      </div>
-      <div v-else-if="frontmatter.layout === 'page'">
-        <JPage />
-      </div>
-      <div v-else>
-        <JPost />
-      </div>
+      <NotFount v-if="page.isNotFound" />
+      <JHome v-else-if="frontmatter.home" />
+      <JPage v-else-if="frontmatter.layout === 'page'" />
+      <JPost v-else />
     </main>
     <JFooter />
   </div>

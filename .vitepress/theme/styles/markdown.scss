@@ -46,7 +46,7 @@ html.dark {
     text-decoration: none;
     color: var(--text-c);
     border-bottom: 1px solid var(--border-c);
-    transition: border 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     &:hover {
       border-bottom: 1px solid var(--text-c);
     }
