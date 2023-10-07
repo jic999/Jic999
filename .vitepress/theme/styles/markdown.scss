@@ -26,17 +26,48 @@ html.dark {
   .vp-adaptive-theme {
     position: relative;
   }
+  .vp-adaptive-theme:hover {
+    .copy {
+      opacity: 1;
+      z-index: 9;
+    }
+    .lang {
+      opacity: 0;
+    }
+  }
   .copy {
     position: absolute;
-    display: none;
+    right: 0;
+    top: 0;
+    margin: 8px;
+    padding: 0;
+    color: var(--text-c-1);
+    font-size: 12px;
+    background: transparent;
+    opacity: 0;
+    transition: opacity 0.4s;
+    &::after {
+      content: '复制';
+      opacity: 0.75;
+      transition: color 0.4s;
+      cursor: pointer;
+    }
+    &:hover {
+      color: var(--text-c);
+    }
+    &.copied::after {
+      content: '已复制';
+    }
   }
   .lang {
     position: absolute;
     right: 0;
     top: 0;
     margin: 8px;
+    color: var(--text-c-1);
     font-size: 14px;
-    transition: opacity 0.2s;
+    opacity: 0.75;
+    transition: opacity 0.4s;
   }
   p {
     color: var(--text-c-1);
