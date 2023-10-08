@@ -6,6 +6,7 @@ import {
   presetUno,
   transformerDirectives,
 } from 'unocss'
+import { presetExtra } from 'unocss-preset-extra'
 
 export default defineConfig({
   theme: {
@@ -45,6 +46,7 @@ export default defineConfig({
       scale: 1.2,
     }),
     presetTypography(),
+    presetExtra(),
   ],
   transformers: [
     transformerDirectives(),
