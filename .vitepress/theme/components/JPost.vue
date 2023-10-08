@@ -9,7 +9,7 @@ const meta = posts.find(post => decodeURIComponent(route.path) === post.path)!
 
 <template>
   <div mx-auto bg-main container padding-base>
-    <div animated animate-fade-in>
+    <div animate-fade-in animated>
       <h1 my-lg>
         {{ meta.title }}
       </h1>
