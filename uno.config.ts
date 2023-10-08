@@ -18,7 +18,7 @@ export default defineConfig({
     {
       'flex-center': 'flex justify-center items-center',
       'border-base': 'border-[#8884]',
-      'padding-base': 'px-4 py-4 md:px-12',
+      'padding-base': 'px-4 py-4 md:px-16',
       'text-contrast': 'text-black dark:text-white',
       'text-btn': 'text-btn-primary',
       'text-secondary': 'text-$text-c-1',

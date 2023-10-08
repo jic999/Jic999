@@ -17,7 +17,7 @@ const meta = posts.find(post => decodeURIComponent(route.path) === post.path)!
         {{ `${meta.date.string} · ${meta.readingTime} min` }}
       </div>
     </div>
-    <img v-if="meta.banner" :src="meta.banner" max-w-full rounded-lg>
+    <img v-if="meta.banner" :src="meta.banner" mt-lg max-w-full rounded-lg>
     <article class="prose" max-w-full>
       <Content class="slide-enter-post" />
     </article>
