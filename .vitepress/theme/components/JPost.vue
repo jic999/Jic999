@@ -8,7 +8,7 @@ const meta = posts.find(post => route.path.includes(post.path))!
 </script>
 
 <template>
-  <div class="slide-enter" mx-auto bg-main container padding-base>
+  <div mx-auto bg-main container padding-base>
     <h1 my-lg>
       {{ meta.title }}
     </h1>

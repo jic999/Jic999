@@ -7,7 +7,7 @@ const { postsByDate } = data
 
 <template>
   <div>
-    <section class="slide-enter" mx-auto shadow bg-main container padding-base>
+    <section mx-auto shadow bg-main container padding-base>
       <template v-for="(posts, time, i) in postsByDate" :key="time">
         <div class="post-group" mt-6>
           <div class="slide-enter" :style="getSlideStyle(4 * i + 1)" mb-lg>
