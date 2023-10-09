@@ -1,11 +1,11 @@
 <script setup lang="ts">
+import { data as postData } from 'unplugin-blog-manager/data'
 import { getSlideStyle } from '@/composables/app'
-import { data as postData } from '@/posts.data'
 
 const postByYear: any = {}
 
 postData.posts.forEach((item) => {
-  const _date = item.date.string.split(',')
+  const _date = item.date.split(',')
   const month = _date[0]
   const year = _date[1]
   if (!postByYear[year])

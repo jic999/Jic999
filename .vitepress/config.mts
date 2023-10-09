@@ -1,7 +1,8 @@
-import path from 'node:path'
+import path, { resolve } from 'node:path'
 import { defineConfig } from 'vitepress'
 import Unocss from 'unocss/vite'
 import { bundledLanguages, getHighlighter } from 'shikiji'
+import BlogManager from 'unplugin-blog-manager/vite'
 
 // https://vitepress.dev/reference/site-config
 export default async () => defineConfig({
@@ -21,6 +22,11 @@ export default async () => defineConfig({
   vite: {
     plugins: [
       Unocss(),
+      BlogManager({
+        targetDir: resolve(__dirname, '../posts'),
+        author: 'jic999',
+        excludes: ['index.md'],
+      }),
     ],
     resolve: {
       alias: {

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { data } from '@/posts.data'
+import { data } from 'unplugin-blog-manager/data'
 import { getSlideStyle } from '@/composables/app'
 
 const { postsByDate } = data
