@@ -58,7 +58,7 @@ code {
     opacity: 0;
     transition: opacity 0.4s;
     &::after {
-      content: '复制';
+      content: 'copy';
       opacity: 0.75;
       transition: color 0.4s;
       cursor: pointer;
@@ -67,7 +67,7 @@ code {
       color: var(--text-c);
     }
     &.copied::after {
-      content: '已复制';
+      content: 'copied';
     }
   }
   .lang {
@@ -148,6 +148,7 @@ code {
     position: fixed;
     top: calc(52px + 1.125rem);
     bottom: 0;
+    padding-left: 1rem;
     font-size: .8em;
     left: 20px;
     z-index: 200;
@@ -157,6 +158,14 @@ code {
     
     ul {
       margin: 0 .2em;
+      opacity: 0;
+      transition: opacity .4s;
+    }
+    > ul {
+      padding: 0;
+    }
+    &:hover ul {
+      opacity: 1;
     }
     li {
       list-style: none;
@@ -167,6 +176,26 @@ code {
         color: var(--text-c);
       }
     }
+  }
+  .table-of-contents-anchor:hover::before {
+    opacity: 1;
+  }
+  .table-of-contents-anchor::before {
+    --uri: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTMgNGgxOHYySDNWNFptMCA3aDEydjJIM3YtMlptMCA3aDE4djJIM3YtMloiLz48L3N2Zz4=);
+    
+    content: '';
+    display: inline-block;
+    margin: .5em 0;
+    background-color: currentColor;
+    width: 1.6em;
+    height: 1.6em;
+    -webkit-mask-size: 100% 100%;
+    color: var(--text-c-1);
+    mask-size: 100% 100%;
+    -webkit-mask-image: var(--uri);
+    mask-image: var(--uri);
+    opacity: 0.4;
+    transition: opacity .4s;
   }
 
   @media (max-width: 1024px) {
