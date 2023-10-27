@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 import Unocss from 'unocss/vite'
 import { bundledLanguages, getHighlighter } from 'shikiji'
 import anchor from 'markdown-it-anchor'
+
 import BlogManager from 'unplugin-blog-manager/vite'
 
 // https://vitepress.dev/reference/site-config
@@ -19,6 +20,11 @@ export default async () => defineConfig({
         symbol: '#',
         renderAttrs: () => ({ 'aria-hidden': 'true' }),
       }),
+    },
+    toc: {
+      level: [1, 2, 3, 4],
+      containerTag: 'div',
+      containerClass: 'table-of-contents-anchor',
     },
   },
   head: [

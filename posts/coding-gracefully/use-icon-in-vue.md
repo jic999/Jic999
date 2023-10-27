@@ -8,6 +8,8 @@ tags: [Icon, Vue, Unocss]
 
 ---
 
+[[toc]]
+
 笔者在个人项目中最常用的方法是使用 [Unocss](https://unocss.dev/)结合 [Iconify](https://iconify.design/) 来引用图标。
 
 Unocss 是一个开源免费高性能且极具灵活性的即时原子化 CSS 引擎，提供了一种 [纯CSS使用图标](https://antfu.me/posts/icons-in-pure-css-zh) 的方法。Iconify 是一个开源的图标库，收集了超过 15 万个矢量图标。当二者相结合时，我们引用图标的方式会变成怎样呢？

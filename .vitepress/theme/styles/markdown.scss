@@ -143,6 +143,37 @@ code {
       opacity: 1;
     }
   }
+
+  .table-of-contents-anchor {
+    position: fixed;
+    top: calc(52px + 1.125rem);
+    bottom: 0;
+    font-size: .8em;
+    left: 20px;
+    z-index: 200;
+    overflow: hidden;
+    width: 200px;
+    flex-direction: column;
+    
+    ul {
+      margin: 0 .2em;
+    }
+    li {
+      list-style: none;
+    }
+    li a {
+      color: var(--text-c-1);
+      &:hover {
+        color: var(--text-c);
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .table-of-contents-anchor {
+      display: none;
+    }
+  }
 }
 
 .prose table {
