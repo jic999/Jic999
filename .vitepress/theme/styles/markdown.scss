@@ -92,9 +92,32 @@ code {
     &:hover {
       border-bottom: 1px solid var(--text-c);
     }
-    code {
-      color: inherit;
-    }
+  }
+  code {
+    color: inherit;
+  }
+  code::after, code::before {
+    content: none;
+  }
+  p > code {
+    font-weight: normal;
+    font-size: 0.8em;
+    padding: 0.2em;
+    background-color: var(--s-bg-c);
+  }
+  .dark p > code {
+    background-color: var(--s-dark-bg-c);
+  }
+
+  hr {
+    border-bottom: 1px solid var(--border-c);
+  }
+
+  blockquote {
+    border-left: 4px solid var(--border-c);
+  }
+  blockquote p{
+    margin: 0.5em;
   }
 }
 
