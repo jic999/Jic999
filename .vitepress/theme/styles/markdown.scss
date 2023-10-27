@@ -93,6 +93,7 @@ code {
       border-bottom: 1px solid var(--text-c);
     }
   }
+
   code {
     color: inherit;
   }
@@ -118,6 +119,29 @@ code {
   }
   blockquote p{
     margin: 0.5em;
+  }
+
+  .header-anchor {
+    float: left;
+    margin-top: .125em;
+    margin-left: -1.2em;
+    padding-right: .5em;
+    font-size: .85em;
+    opacity: 0;
+    text-decoration: none;
+    border: 0 !important;
+    transition: all 0.3s;
+    color: var(--text-c-1);
+
+    &:hover {
+      color: var(--text-c);
+    }
+  }
+
+  h1, h2, h3, h4, h5 {
+    &:hover .header-anchor {
+      opacity: 1;
+    }
   }
 }
 

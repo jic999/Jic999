@@ -2,6 +2,7 @@ import path, { resolve } from 'node:path'
 import { defineConfig } from 'vitepress'
 import Unocss from 'unocss/vite'
 import { bundledLanguages, getHighlighter } from 'shikiji'
+import anchor from 'markdown-it-anchor'
 import BlogManager from 'unplugin-blog-manager/vite'
 
 // https://vitepress.dev/reference/site-config
@@ -13,6 +14,12 @@ export default async () => defineConfig({
   lang: 'zh-CN',
   markdown: {
     highlight: await highlighter(),
+    anchor: {
+      permalink: anchor.permalink.linkInsideHeader({
+        symbol: '#',
+        renderAttrs: () => ({ 'aria-hidden': 'true' }),
+      }),
+    },
   },
   head: [
     ['link', { rel: 'stylesheet', href: 'https://cdn.staticfile.org/lxgw-wenkai-webfont/1.6.0/style.css' }],

@@ -40,6 +40,9 @@ devDependencies:
   markdown-it:
     specifier: ^13.0.2
     version: registry.npmmirror.com/markdown-it@13.0.2
+  markdown-it-anchor:
+    specifier: ^8.6.7
+    version: 8.6.7(@types/markdown-it@13.0.2)(markdown-it@13.0.2)
   sass:
     specifier: ^1.69.0
     version: registry.npmmirror.com/sass@1.69.0
@@ -610,6 +613,16 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
+    dev: true
+
+  /markdown-it-anchor@8.6.7(@types/markdown-it@13.0.2)(markdown-it@13.0.2):
+    resolution: {integrity: sha512-FlCHFwNnutLgVTflOYHPW2pPcl2AACqVzExlkGQNsi4CJgqOHN7YTgDd4LuhgN1BFO3TS0vLAruV1Td6dwWPJA==}
+    peerDependencies:
+      '@types/markdown-it': '*'
+      markdown-it: '*'
+    dependencies:
+      '@types/markdown-it': registry.npmmirror.com/@types/markdown-it@13.0.2
+      markdown-it: registry.npmmirror.com/markdown-it@13.0.2
     dev: true
 
   /markdown-it@13.0.2:
