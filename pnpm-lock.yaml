@@ -1452,7 +1452,7 @@ packages:
     dependencies:
       cross-spawn: registry.npmmirror.com/cross-spawn@7.0.3
       fast-glob: registry.npmmirror.com/fast-glob@3.3.1
-      is-glob: registry.npmmirror.com/is-glob@4.0.3
+      is-glob: 4.0.3
       open: registry.npmmirror.com/open@9.1.0
       picocolors: registry.npmmirror.com/picocolors@1.0.0
       tslib: registry.npmmirror.com/tslib@2.6.2
@@ -1729,10 +1729,10 @@ packages:
     dependencies:
       '@typescript-eslint/types': registry.npmmirror.com/@typescript-eslint/types@6.7.4
       '@typescript-eslint/visitor-keys': registry.npmmirror.com/@typescript-eslint/visitor-keys@6.7.4
-      debug: registry.npmmirror.com/debug@4.3.4
+      debug: 4.3.4
       globby: registry.npmmirror.com/globby@11.1.0
-      is-glob: registry.npmmirror.com/is-glob@4.0.3
-      semver: registry.npmmirror.com/semver@7.5.4
+      is-glob: 4.0.3
+      semver: 7.5.4
       ts-api-utils: registry.npmmirror.com/ts-api-utils@1.0.3(typescript@5.2.2)
       typescript: 5.2.2
     transitivePeerDependencies:

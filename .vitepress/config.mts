@@ -28,7 +28,7 @@ export default async () => defineConfig({
     },
   },
   head: [
-    ['link', { rel: 'stylesheet', href: 'https://cdn.staticfile.org/lxgw-wenkai-webfont/1.6.0/style.css' }],
+    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css' }],
     ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css' }],
     ['link', { rel: 'shortcut icon', type: 'image/svg' }],
   ],
